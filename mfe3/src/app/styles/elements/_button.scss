@@ -1,0 +1,37 @@
+button {
+    @extend .siemens-sans-font-m-bold;
+
+    &.text-button {
+        height: 28px;
+        min-width: 90px;
+        color: $siemens-color-4;
+        outline: none;
+        margin-left: 20px;
+        border: none;
+
+        &:not(:disabled) {
+            cursor: pointer;
+            &:hover {
+                background-color: $siemens-color-39;
+            }
+        }
+
+        &:disabled {
+            background-color: $siemens-color-11;
+        }
+    }
+}
+
+.icon-button {
+    font-size: 16px;
+    &:not(:disabled) {
+        &:hover {
+            cursor: pointer;
+            color: $siemens-color-39;
+        }
+    }
+
+    &:disabled {
+        color: $siemens-color-11;
+    }
+}

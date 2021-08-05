@@ -1,0 +1,121 @@
+.input-text-group {
+    float: left;
+    position: relative;
+    min-width: 200px;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 15px;
+
+    &.filter-text {
+        margin: 0;
+    }
+
+    .input-text-underlined {
+        float: left;
+        width: 100%;
+        position: relative;
+
+        .input-text-label {
+            @extend .siemens-sans-font-m;
+            position: absolute;
+            top: 18px;
+            left: 8px;
+            line-height: 0;
+            transform: translateY(-22px);
+            transform-origin: 0 0;
+            transition: transform 0.2s ease-in;
+            -webkit-transform-origin: 0 0;
+        }
+
+        .status-icons {
+            display: flex;
+            position: absolute;
+            top: 7px;
+            right: 15px;
+            color: $siemens-color-7;
+
+            i {
+                &.fa {
+                    margin-right: 8px;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+
+                &.error-icon {
+                    color: $siemens-color-46;
+                    display: none;
+                }
+
+                &:not(:disabled),
+                &:not(.error-icon) {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .input-text-helper {
+            @extend .siemens-sans-font-s;
+            display: none;
+            margin: 0 8px;
+        }
+
+        &:hover {
+            outline: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            outline: none;
+            @extend .siemens-sans-font-m;
+            border: none;
+            width: 100%;
+            height: 28px;
+            box-sizing: border-box;
+            padding-left: 8px;
+            padding-right: 30px;
+            color: $siemens-color-3;
+            border-bottom: 1px solid $siemens-color-7;
+
+            &:hover {
+                outline: none;
+                border-bottom: 1px solid $siemens-color-39;
+            }
+
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $siemens-color-33;
+            }
+
+            &:disabled {
+                color: $siemens-color-36;
+                cursor: not-allowed;
+
+                & + .input-text-label {
+                    color: $siemens-color-11;
+                }
+            }
+
+            &.error {
+                border-bottom: 1px solid $siemens-color-46;
+
+                & ~ .input-text-helper {
+                    display: block;
+                    color: $siemens-color-46;
+                }
+
+                & ~ .status-icons {
+                    .error-icon {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

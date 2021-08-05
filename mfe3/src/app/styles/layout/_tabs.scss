@@ -1,0 +1,46 @@
+@import "../shared/shared";
+
+ul.tabs {
+  list-style: none;
+  float: left;
+  height: 100%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+  li.tab {
+    float: left;
+    background-color: $siemens-color-4;
+    width: auto;
+    display: flex;
+    align-items: center;
+
+    margin-right: 15px;
+    height: 28px;
+    vertical-align: middle;
+    cursor: pointer;
+
+    a {
+      float: left;
+      @extend .siemens-sans-font-m-bold;
+      display: block;
+      text-align: left;
+      padding: 4px 0;
+      height: 100%;
+      text-decoration: none;
+      box-sizing: border-box;
+      border-bottom: none;
+      color: $siemens-color-18;
+
+      &.active {
+        color: $siemens-color-33;
+        border-bottom: 3px solid $siemens-color-33;
+      }
+
+      &:hover {
+        color: $siemens-color-39;
+        border-bottom: 3px solid $siemens-color-39;
+      }
+    }
+  }
+}

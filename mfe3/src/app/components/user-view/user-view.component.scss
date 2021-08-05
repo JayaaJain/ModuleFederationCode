@@ -1,0 +1,93 @@
+// @import "../../styles/main";
+
+:host{
+    .user-view-container{
+        display: flex;
+        justify-content:space-between;
+        margin-top:20px ;
+        .right-side-table-container{
+            flex-basis: 70%;
+            display: flex;
+            .checkbox-table-container{
+                flex-basis: 5%;
+                .table.header-table{
+                    .table-row.header-row{
+                        .table-head{
+                            width: 30%;
+                            .checkbox-space-container{
+                                height: 44px;
+                            }
+                            .table-title{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .topic-table-container{
+                flex-basis: 40%;
+
+                .table.header-table{
+                    .table-row.header-row{
+                        .table-head{
+                            width: 30%;
+                            .table-title{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .permission-table-container{
+                flex-basis: 40%;
+
+                .table.header-table{
+                    .table-row.header-row{
+                        .table-head{
+                            width: 30%;
+                            .table-title{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .action-table-container{
+                flex-basis:10%;
+
+                .table.header-table{
+                    .table-row.header-row{
+                        .icon-container{
+                            height:44px;
+                            position: relative;
+                            left:25%;
+                            top:45%;
+                            font-size: medium;
+                        }
+                        .table-head{
+                            width: 30%;
+                            .table-title{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .user-table-container{
+            flex-basis:300px;
+            width: 30%;
+            .table.header-table{
+                .table-row.header-row{
+                    .table-head{
+                        width: 100%;
+                        .table-title{
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

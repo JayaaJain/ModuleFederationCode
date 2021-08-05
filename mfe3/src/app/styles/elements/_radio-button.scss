@@ -1,0 +1,53 @@
+.radio-button {
+    @extend .siemens-sans-font-m;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    float: left;
+
+    input[type="radio"] {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        border: 2px solid $siemens-color-36;
+        background: $siemens-color-4;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        margin: 0;
+
+        &:hover {
+            border-color: $siemens-color-29;
+            background: $siemens-color-35;
+
+            &:before {
+                background: $siemens-color-29;
+                content: "";
+                display: block;
+                width: 50%;
+                height: 50%;
+                margin: 25% auto;
+                border-radius: 50%;
+            }
+        }
+
+        &:checked {
+            border-color: $siemens-color-27;
+            background: $siemens-color-35;
+
+            &:before {
+                background: $siemens-color-29;
+                content: "";
+                display: block;
+                width: 50%;
+                height: 50%;
+                margin: 25% auto;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    label {
+        padding-left: 8px;
+    }
+}

@@ -1,0 +1,96 @@
+@import "fontface";
+
+$font-family-sans: "Siemens Sans";
+$siemens-sans-global: "Siemens-Sans-Global";
+
+.siemens-sans-global-font {
+    font-family: $siemens-sans-global;
+}
+
+.siemens-sans-font {
+    font-family: $siemens-sans-global;
+}
+
+.siemens-sans-font-xxl {
+    @extend .siemens-sans-font;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.siemens-sans-font-xxl-bold {
+    @extend .siemens-sans-font;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.siemens-sans-font-xl {
+    @extend .siemens-sans-font;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.siemens-sans-font-xl-bold {
+    @extend .siemens-sans-font;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.siemens-sans-font-l {
+    @extend .siemens-sans-font;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.siemens-sans-font-l-bold {
+    @extend .siemens-sans-font;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.siemens-sans-font-m {
+    @extend .siemens-sans-font;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.siemens-sans-font-m-bold {
+    @extend .siemens-sans-font;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.siemens-sans-font-s {
+    @extend .siemens-sans-font;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.siemens-sans-font-s-bold {
+    @extend .siemens-sans-font;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.siemens-sans-font-xs {
+    @extend .siemens-sans-font;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.siemens-sans-font-xs-bold {
+    @extend .siemens-sans-font;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.siemens-sans-font-xxs {
+    @extend .siemens-sans-font;
+    font-size: 8px;
+    font-weight: normal;
+}
+
+.siemens-sans-font-xxs-bold {
+    @extend .siemens-sans-font;
+    font-size: 8px;
+    font-weight: bold;
+}

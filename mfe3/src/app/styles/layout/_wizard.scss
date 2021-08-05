@@ -1,0 +1,103 @@
+@import "../shared/shared";
+
+.wizard {
+    @extend .siemens-sans-font-m;
+    margin: auto;
+    margin-bottom: 30px;
+    min-width: 700px;
+
+    .wizard-item {
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+        height: 40px;
+        padding: 0;
+        border: 1px solid $siemens-color-13;
+        margin-right: 5px;
+        min-width: 120px;
+        background-color: $siemens-color-13;
+        color: $siemens-color-3;
+
+        &.right:after {
+            box-sizing: border-box;
+            background-color: $siemens-color-13;
+            content: "";
+            border-top: 1px solid $siemens-color-13;
+            border-right: 1px solid $siemens-color-13;
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            right: 0;
+            top: 0px;
+            z-index: 150;
+
+            -webkit-transform: translate(15px, 5px) rotate(45deg);
+            -moz-transform: translate(15px, 5px) rotate(45deg);
+            -ms-transform: translate(15px, 5px) rotate(45deg);
+            -o-transform: translate(15px, 5px) rotate(20deg);
+            transform: translate(15px, 5px) rotate(45deg);
+        }
+
+        &.left:before {
+            content: "";
+            border-top: 1px solid $siemens-color-13;
+            border-right: 1px solid $siemens-color-13;
+            width: 27px;
+            height: 27px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $siemens-color-4;
+            z-index: 50;
+
+            -webkit-transform: translate(-14px, 5px) rotate(45deg);
+            -moz-transform: translate(-14px, 5px) rotate(45deg);
+            -ms-transform: translate(-14px, 5px) rotate(45deg);
+            -o-transform: translate(-14px, 5px) rotate(20deg);
+            transform: translate(-14px, 5px) rotate(45deg);
+        }
+
+        &.active:after,
+        &.active:before {
+            background-color: $siemens-color-4;
+            border-color: $siemens-color-36;
+        }
+
+        &:hover {
+            @extend .siemens-sans-font-m-bold;
+            color: $siemens-color-39;
+            background-color: $siemens-color-13;
+            border: 1px solid $siemens-color-13;
+        }
+
+        .content {
+            border: none;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            box-sizing: border-box;
+            padding-left: 28px;
+            padding-right: 20px;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+
+        &.active {
+            @extend .siemens-sans-font-m-bold;
+            background-color: $siemens-color-4;
+            border-color: $siemens-color-36;
+            color: $siemens-color-33;
+        }
+
+        &.inactive {
+            background-color: $siemens-color-13;
+            border: 1px solid $siemens-color-13;
+            color: $siemens-color-36;
+
+            &:hover {
+                @extend .siemens-sans-font-m;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

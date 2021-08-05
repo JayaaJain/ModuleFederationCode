@@ -1,0 +1,125 @@
+@import "../shared/shared";
+
+.table {
+    @extend .siemens-sans-font-m;
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    .table-row {
+        display: table-row;
+        height: 32px;
+
+        &.hide-row {
+            display: none;
+        }
+
+        .table-head {
+            display: table-cell;
+            vertical-align: middle;
+            @extend .siemens-sans-font-m-bold;
+            padding-left: 12px;
+            word-break: break-word;
+            border: 1px solid $siemens-color-4;
+
+            &.select-all-cell {
+                width: 28px;
+                padding-left: 10px;
+            }
+
+            &.actions-cell {
+                width: 95px;
+                padding-left: 0;
+
+                .fa,
+                .fas {
+                    cursor: pointer;
+                    float: left;
+                    padding-right: 15px;
+                    &:first-of-type {
+                        padding-left: 8px;
+                    }
+                    &:last-of-type {
+                        padding-right: 8px;
+                    }
+                }
+            }
+
+            .column-action {
+                margin-left: 15px;
+                cursor: pointer;
+            }
+        }
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            height: 28px;
+            padding-left: 12px;
+            word-break: break-word;
+            border: 1px solid $siemens-color-38;
+
+            // &.hierarchy-level-1 {
+
+            // }
+
+            &.hierarchy-level-2 {
+                padding-left: 40px;
+            }
+
+            &.hierarchy-level-3 {
+                padding-left: 80px;
+            }
+
+            &.select-all-cell {
+                width: 28px;
+                padding-left: 10px;
+            }
+
+            &.actions-cell {
+                width: 95px;
+                padding-left: 0;
+
+                .fa,
+                .fas {
+                    cursor: pointer;
+                    float: left;
+                    padding-right: 15px;
+                    &:first-of-type {
+                        padding-left: 8px;
+                    }
+                    &:last-of-type {
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            .table-cell {
+                border-top: none;
+            }
+        }
+
+        &.header-row {
+            background-color: $siemens-color-13;
+
+            &.filter-row {
+                height: 38px;
+
+                .table-head {
+                    padding: 0 2px;
+
+                    &:last-of-type {
+                        color: $siemens-color-18;
+                    }
+                }
+            }
+
+            &:first-of-type {
+                background-color: $siemens-color-32;
+            }
+        }
+    }
+}

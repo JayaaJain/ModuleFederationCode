@@ -1,0 +1,86 @@
+.checkbox-container {
+    @extend .siemens-sans-font-m;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .checkmark {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        height: 12px;
+        width: 12px;
+        background-color: $siemens-color-4;
+        border: 2px solid $siemens-color-36;
+        box-sizing: border-box;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 2px;
+            top: 0px;
+            width: 2px;
+            height: 5px;
+            border: 2px solid $siemens-color-18;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:disabled {
+            & ~ .checkmark {
+                border: 2px solid $siemens-color-11 !important;
+                background-color: $siemens-color-4;
+                cursor: not-allowed;
+
+                &:after {
+                    border: 2px solid $siemens-color-11;
+                    border-width: 0 2px 2px 0;
+                }
+            }
+        }
+
+        &:checked {
+            & ~ .checkmark {
+                border: 2px solid $siemens-color-7;
+                background-color: $siemens-color-4;
+
+                &:after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &:hover input {
+        &:not(:disabled) {
+            & ~ .checkmark {
+                border: 2px solid $siemens-color-39;
+                background-color: $siemens-color-4;
+            }
+        }
+    }
+
+    &.disabled {
+        color: $siemens-color-11;
+        cursor: not-allowed;
+    }
+}

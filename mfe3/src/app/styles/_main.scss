@@ -1,0 +1,22 @@
+@import "./shared/shared";
+@import "./elements/checkbox";
+@import "./elements/radio-button";
+@import "./elements/textbox";
+@import "./elements/primary-button";
+@import "./elements/secondary-button";
+@import "./layout/modal";
+@import "./layout/table";
+
+body {
+    @extend .siemens-sans-global-font;
+    background-color: $siemens-color-4;
+
+    a {
+        text-decoration: none;
+        color: $siemens-color-33;
+
+        &:hover {
+            color: $siemens-color-39;
+        }
+    }
+}

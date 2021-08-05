@@ -1,0 +1,33 @@
+@import "../shared/font";
+@import "../shared/colors";
+
+$full-width: 100%;
+$global-header-height: 55px;
+
+.application-header {
+    float: left;
+    width: $full-width;
+    padding: 0 40px;
+    margin-bottom: 20px;
+
+    .page-header {
+        @extend .siemens-sans-font-xxl;
+        float: left;
+        width: 100%;
+        margin: 20px 0;
+        height: $global-header-height;
+        color: $siemens-color-18;
+
+        .page-header-text {
+            float: left;
+            height: 100%;
+            width: calc(100% - 130px);
+            display: flex;
+            align-items: center;
+
+            #app_page_header {
+                width: 100%;
+            }
+        }
+    }
+}
